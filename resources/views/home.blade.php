@@ -4138,7 +4138,6 @@ Module::find('Googleclassroom')->isEnabled())
 <section id="trusted" class="trusted-main-block">
     <div class="container-xl">
         <div class="patners-block">
-
             <h6 class="patners-heading btm-40">{{ __('Our Partners & Clients') }}</h6>
             <div id="patners-slider" class="patners-slider owl-carousel">
                 @foreach($trusted as $trust)
