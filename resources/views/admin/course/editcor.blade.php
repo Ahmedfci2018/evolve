@@ -64,7 +64,7 @@
                 @endif
               </select>
             </div>
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
               <label for="exampleInputSlug">{{ __('SelectUser') }}</label>
               <select name="user_id" class="form-control js-example-basic-single col-md-7 col-xs-12">
                 @if(Auth::user()->role == 'admin')
@@ -75,7 +75,7 @@
                 <option value="{{ Auth::user()->id }}">{{ Auth::user()->fname }}</option>
                 @endif
               </select>
-            </div>
+            </div> --}}
           </div>
           <br>
 
@@ -266,7 +266,7 @@
 
 
           <!-- country start -->
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-md-12">
 
               <label>{{ __('Country') }}: <span></span></label>
@@ -279,7 +279,7 @@
               <small class="text-info"><i class="fa fa-question-circle"></i> ({{ __('Select those countries where you want to block courses')}} )</small>
 
             </div>
-          </div>
+          </div> --}}
           <br>
           <!-- country end -->
 
@@ -338,7 +338,7 @@
 
             @endif
           </div>
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-md-4">
               <label for="exampleInputDetails">{{ __('Instructor InvolvementRequest') }}:</label><br>
               <label class="switch">
@@ -349,7 +349,7 @@
 
             </div>
           </div>
-          <br>
+          <br> --}}
 
 
           <div class="col-md-4">
@@ -466,7 +466,7 @@
 
 
 
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
           @if(Auth::User()->role == "admin")
           <label for="Revenue">{{ __('Instructor Revenue') }}:</label>
 
@@ -476,7 +476,7 @@
             <span class="input-group-addon"><i class="fa fa-percent"></i></span>
           </div>
           @endif
-        </div>
+        </div> --}}
       </div>
       <br>
 
@@ -504,7 +504,7 @@
 
         </div>
 
-        <div class="col-sm-3">
+        {{-- <div class="col-sm-3">
 
           <label for="exampleInputDetails">{{ __('CertificateEnable') }}:</label><br>
           <!--  -->
@@ -525,7 +525,7 @@
           <br>
           <small class="text-info"><i class="fa fa-question-circle"></i> {{ __('To release content on chapter & classes by a specific date or amount of days after enrollment') }}.
           </small>
-        </div>
+        </div> --}}
       </div>
       <br>
       <br>

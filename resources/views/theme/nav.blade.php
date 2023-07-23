@@ -193,7 +193,7 @@
                                
                         <li class="mr-4"><a href="/user_contact" title="Contact Us"><i data-feather="phone"></i>{{ __('Contact us') }}</a></li>
                         <li class="mr-4"><a href="/about/show" title="{{ __('About us') }}"><i data-feather="info"></i>{{ __('About us') }}</a></li>
-                        <!--<li class="mr-4"><a href="/calender" title="{{ __('Economic Calendar') }}"><i data-feather="info"></i>{{ __('Economic Calendar') }}</a></li>-->
+                        <li class="mr-4"><a href="/all/blog" title="{{ __('Blog') }}"><i data-feather="info"></i>{{ __('Blog') }}</a></li>
                   </ul>
                   </div>
                       
@@ -374,8 +374,8 @@
                                     @endif 
                                     <li class="mr-4"><a href="/user_contact" title="Contact Us"><i data-feather="phone"></i>{{ __('Contact us') }}</a></li>
                                     <li class="mr-4"><a href="/about/show" title="{{ __('About us') }}"><i data-feather="info"></i>{{ __('About us') }}</a></li>
-                                    <!--<li class="mr-4"><a href="/calender" title="{{ __('Economic Calendar') }}"><i data-feather="info"></i>{{ __('Economic Calendar') }}</a></li>-->
-                              </ul>
+                                    <li class="mr-4"><a href="/all/blog" title="{{ __('Blog') }}"><i data-feather="info"></i>{{ __('Blog') }}</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

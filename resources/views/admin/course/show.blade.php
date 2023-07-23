@@ -32,9 +32,9 @@ $data['title'] = 'Edit Course';
 
             <a class="nav-link mb-2 show active" data-toggle="pill" href="#v-pills-courseedit" role="tab" aria-selected="true"><i class="feather icon-grid mr-2"></i>{{ __('Course') }}</a>
 
-            <a class="nav-link mb-2" id="v-pills-order-tab" data-toggle="pill" href="#v-pills-order" role="tab" aria-controls="v-pills-order" aria-selected="false"><i class="feather icon-book mr-2"></i>{{ __('CourseInclude') }}</a>
+            {{-- <a class="nav-link mb-2" id="v-pills-order-tab" data-toggle="pill" href="#v-pills-order" role="tab" aria-controls="v-pills-order" aria-selected="false"><i class="feather icon-book mr-2"></i>{{ __('CourseInclude') }}</a> --}}
 
-            <a class="nav-link mb-2" id="v-pills-addresses-tab" data-toggle="pill" href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses" aria-selected="false"><i class="feather icon-map-pin mr-2"></i>{{ __('WhatLearns') }}</a>
+            {{-- <a class="nav-link mb-2" id="v-pills-addresses-tab" data-toggle="pill" href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses" aria-selected="false"><i class="feather icon-map-pin mr-2"></i>{{ __('WhatLearns') }}</a> --}}
 
             <a class="nav-link mb-2" id="v-pills-wishlist-tab" data-toggle="pill" href="#v-pills-wishlist" role="tab" aria-controls="v-pills-wishlist" aria-selected="false"><i class="feather icon-book-open mr-2"></i>{{ __('CourseChapter') }}</a>
 
@@ -42,21 +42,21 @@ $data['title'] = 'Edit Course';
 
             <a class="nav-link mb-2" id="v-pills-chat-tab" data-toggle="pill" href="#v-pills-chat" role="tab" aria-controls="v-pills-chat" aria-selected="false"><i class="feather icon-message-circle mr-2"></i>{{ __('RelatedCourse') }}</a>
 
-            <a class="nav-link mb-2" id="v-pills-notifications-tab" data-toggle="pill" href="#v-pills-notifications" role="tab" aria-controls="v-pills-notifications" aria-selected="false"><i class="feather icon-bell mr-2"></i>{{ __('Question') }}</a>
+            {{-- <a class="nav-link mb-2" id="v-pills-notifications-tab" data-toggle="pill" href="#v-pills-notifications" role="tab" aria-controls="v-pills-notifications" aria-selected="false"><i class="feather icon-bell mr-2"></i>{{ __('Question') }}</a> --}}
 
             <a class="nav-link mb-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="feather icon-user mr-2"></i>{{ __('ReviewRating') }}</a>
 
-            <a class="nav-link  mb-2" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false"><i class="feather icon-speaker mr-2"></i>{{ __('Announcement') }}</a>
+            {{-- <a class="nav-link  mb-2" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false"><i class="feather icon-speaker mr-2"></i>{{ __('Announcement') }}</a> --}}
 
-            <a class="nav-link  mb-2" id="v-pills-ReviewReport-tab" data-toggle="pill" href="#v-pills-ReviewReport" role="tab" aria-controls="v-pills-ReviewReport" aria-selected="false"><i class="feather icon-file-text mr-2"></i>{{ __('ReviewReport') }}</a>
+            {{-- <a class="nav-link  mb-2" id="v-pills-ReviewReport-tab" data-toggle="pill" href="#v-pills-ReviewReport" role="tab" aria-controls="v-pills-ReviewReport" aria-selected="false"><i class="feather icon-file-text mr-2"></i>{{ __('ReviewReport') }}</a> --}}
 
             <a class="nav-link  mb-2" id="v-pills-QuizTopic-tab" data-toggle="pill" href="#v-pills-QuizTopic" role="tab" aria-controls="v-pills-QuizTopic" aria-selected="false"><i class="feather icon-log-out mr-2"></i>{{ __('QuizTopic') }}</a>
 
             @if($gsetting->appointment_enable == 1)
-            <a class="nav-link" id="v-pills-Appointment-tab3" data-toggle="pill" href="#v-pills-Appointment" role="tab" aria-controls="v-pills-Appointment" aria-selected="false"><i class="feather icon-plus mr-2"></i>{{ __('Appointment') }}</a>
+            {{-- <a class="nav-link" id="v-pills-Appointment-tab3" data-toggle="pill" href="#v-pills-Appointment" role="tab" aria-controls="v-pills-Appointment" aria-selected="false"><i class="feather icon-plus mr-2"></i>{{ __('Appointment') }}</a> --}}
             @endif
 
-            <a class="nav-link" id="v-pills-PreviousPaper-tab4" data-toggle="pill" href="#v-pills-PreviousPaper" role="tab" aria-controls="v-pills-PreviousPaper" aria-selected="false"><i class="feather icon-file mr-2"></i>{{ __('PreviousPaper') }}</a>
+            {{-- <a class="nav-link" id="v-pills-PreviousPaper-tab4" data-toggle="pill" href="#v-pills-PreviousPaper" role="tab" aria-controls="v-pills-PreviousPaper" aria-selected="false"><i class="feather icon-file mr-2"></i>{{ __('PreviousPaper') }}</a> --}}
             @endif
 
           </div>

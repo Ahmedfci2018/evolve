@@ -22,7 +22,7 @@
 <meta name="keywords" content="{{ $gsetting->meta_data_keyword }}">
 @endsection
 <!-- categories-tab start-->
-@if($gsetting->category_enable == 1)
+{{-- @if($gsetting->category_enable == 1)
 <section id="categories-tab" class="categories-tab-main-block">
     <div class="container-xl">
         <div id="categories-tab-slider" class="categories-tab-block owl-carousel">
@@ -37,7 +37,7 @@
         </div>
     </div>
 </section>
-@endif
+@endif --}}
 <!-- categories-tab end-->
 @if(isset($sliders))
 <section id="home-background-slider" class="background-slider-block owl-carousel">
@@ -3804,7 +3804,7 @@ Module::find('Googleclassroom')->isEnabled())
 @if($hsetting->testimonial_enable == 1 && ! $testi->isEmpty() )
 <section id="testimonial" class="testimonial-main-block">
     <div class="container-xl">
-        <h4>{{ __('Testimonial') }}</h4>
+        <h4>{{ __('What people say?') }}</h4>
         <div id="testimonial-slider" class="testimonial-slider-main-block owl-carousel">
             @foreach($testi as $tes)
             <div class="item testi-block text-center">

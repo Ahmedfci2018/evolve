@@ -25,14 +25,14 @@
                                 </a>
                             </li>
                             
-                            @can(['marketing-dashboard.manage'])
+                            {{-- @can(['marketing-dashboard.manage'])
                             <li class="{{ Nav::isRoute('market.index') }}">
                                 <a class="nav-link" href="{{route('market.index')}}">
                                     <i class="feather icon-activity text-secondary"></i>
                                     <span>{{ __('Marketing Dashboard') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan --}}
                             <!-- dashboard end -->
                             @canany(['users.view','Alluser.view','Allinstructor.view'])
                             <li class="header">{{ __('Users') }}</li>

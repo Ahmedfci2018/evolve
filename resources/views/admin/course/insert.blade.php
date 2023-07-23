@@ -51,7 +51,7 @@ $data['title1'] = 'Create a Course';
                 <label>{{ __('ChildCategory') }}:</label>
                 <select name="childcategory_id" id="grand" class="form-control select2"></select>
               </div>
-              <div class="col-md-3">
+              {{-- <div class="col-md-3">
                 <label for="exampleInputTit1e">{{ __('Instructor') }}<span class="redstar"></span></label>
                 <select name="user_id" class="form-control js-example-basic-single col-md-7 col-xs-12">
                   @if(Auth::user()->role == 'admin')
@@ -63,7 +63,7 @@ $data['title1'] = 'Create a Course';
                   <option value="{{Auth::user()->id}}">{{Auth::user()->fname}}</option>
                   @endif
                 </select>
-              </div>
+              </div> --}}
               <br>
               <div class="col-md-12">
                 <div class="form-group">
@@ -82,7 +82,7 @@ $data['title1'] = 'Create a Course';
             </div>
 
             <div class="row">
-              <div class="col-md-4">
+              {{-- <div class="col-md-4">
                 <label>{{ __('Language') }}: <span class="redstar"></span></label>
                 <select name="language_id" class="form-control select2">
                   @php
@@ -92,9 +92,9 @@ $data['title1'] = 'Create a Course';
                   <option {{ $caat->language_id == $caat->id ? 'selected' : "" }} value="{{ $caat->id }}">{{ $caat->name }}</option>
                   @endforeach
                 </select>
-              </div>
+              </div> --}}
 
-              <div class="col-md-4">
+              {{-- <div class="col-md-4">
                 @php
                 $ref_policy = App\RefundPolicy::all();
                 @endphp
@@ -108,7 +108,7 @@ $data['title1'] = 'Create a Course';
                   @endforeach
                 </select>
 
-              </div>
+              </div> --}}
 
               @if(Auth::User()->role == "admin")
               <div class="col-md-4">
@@ -128,7 +128,7 @@ $data['title1'] = 'Create a Course';
               @endif
 
               @if(Auth::User()->role == "instructor")
-              <div class="col-md-4">
+              {{-- <div class="col-md-4">
                 <label>{{ __('Institute') }}: <span class="redstar"></span></label>
                 <select name="institude_id" class="form-control select2">
                   @php
@@ -141,7 +141,7 @@ $data['title1'] = 'Create a Course';
                   <option value="{{ $inst->id }}">{{ $inst->title }}</option>
                   @endforeach
                 </select>
-              </div>
+              </div> --}}
               @endif
 
 
@@ -183,7 +183,7 @@ $data['title1'] = 'Create a Course';
             <br>
 
             <!-- country start -->
-            <div class="row">
+            {{-- <div class="row">
               <div class="col-md-4">
 
                 <label>{{ __('Country') }}: </label>
@@ -195,7 +195,7 @@ $data['title1'] = 'Create a Course';
 
                 <small class="text-info"><i class="fa fa-question-circle"></i> ({{ __('Select those countries where you want to block course.')}} )</small>
 
-              </div>
+              </div> --}}
             <!-- country end -->
 
             @if(Auth::User()->role == "admin")
@@ -231,7 +231,7 @@ $data['title1'] = 'Create a Course';
 
 
             <div class="row">
-              <div class="col-md-12 d-none">
+              {{-- <div class="col-md-12 d-none">
 
 
                 <label for="exampleInputSlug">{{ __('Return Available') }}</label>
@@ -245,7 +245,7 @@ $data['title1'] = 'Create a Course';
 
                 </select>
 
-              </div>
+              </div> --}}
             </div>
             <br>
             <div class="row">
@@ -294,12 +294,12 @@ $data['title1'] = 'Create a Course';
               @endif
             </div>
 
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
               <label for="exampleInputDetails">{{ __('Involvement Request') }}:</label>
               <input name="involvement_request" type="checkbox" class="custom_toggle" id="involve" checked />
               <label class="tgl-btn" data-tg-off="{{ __('OFF') }}" data-tg-on="{{ __('ON') }}" for="involve"></label>
 
-            </div>
+            </div> --}}
         </div>
         <br>
 
@@ -364,7 +364,7 @@ $data['title1'] = 'Create a Course';
           @endif
 
 
-          <div class="col-md-4">
+          {{-- <div class="col-md-4">
             @if(Auth::User()->role == "admin")
             <label for="Revenue">{{ __('Instructor Revenue') }} %:</label>
             <div class="input-group">
@@ -372,7 +372,7 @@ $data['title1'] = 'Create a Course';
               <span class="input-group-addon"><i class="fa fa-percent"></i></span>
             </div>
             @endif
-          </div>
+          </div> --}}
         </div>
         </br>
         <br>
@@ -395,7 +395,7 @@ $data['title1'] = 'Create a Course';
 
           </div>
 
-          <div class="col-sm-3">
+          {{-- <div class="col-sm-3">
             <label for="exampleInputDetails">{{ __('Certificate Enable') }}:</label>
             <input {{ old('certificate_enable') == "0" ? '' : "checked" }} id="frees2" type="checkbox" class="custom_toggle" name="certificate_enable" checked />
             <label class="tgl-btn" data-tg-off="{{ __('No') }}" data-tg-on="{{ __('Yes') }}" for="frees2"></label>
@@ -405,7 +405,7 @@ $data['title1'] = 'Create a Course';
             <label for="">{{ __('Drip Content') }}: </label>
             <input id="drip_enable" type="checkbox" class="custom_toggle" name="drip_enable" checked />
             <label class="tgl-btn" data-tg-off="Disable" data-tg-on="Enable" for="drip_enable"></label>
-          </div>
+          </div> --}}
         </div>
         <br>
         <br>

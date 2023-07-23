@@ -27,14 +27,14 @@
                                 </a>
                             </li>
                             
-                            @can(['marketing-dashboard.manage'])
+                            {{-- @can(['marketing-dashboard.manage'])
                             <li class="{{ Nav::isRoute('market.index') }}">
                                 <a class="nav-link" href="{{route('market.index')}}">
                                     <i class="feather icon-activity text-secondary"></i>
                                     <span>{{ __('Marketing Dashboard') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan --}}
                             <!-- dashboard end -->
                             @canany(['users.view','Alluser.view','Allinstructor.view'])
                             <li class="header">{{ __('Users') }}</li>
@@ -181,21 +181,21 @@
                                             href="{{url('course')}}"><span>{{ __('Courses') }}</span></a>
                                     </li>
                                     @endcan
-                                    @can(['bundle-courses.view'])
+                                    {{-- @can(['bundle-courses.view'])
                                     <li class="{{ Nav::isResource('bundle') }}"><a
                                             href="{{url('bundle')}}"><span>{{ __('Bundle Course') }}</span></a>
                                     </li>
-                                    @endcan
-                                    @can(['course-languages.view'])
+                                    @endcan --}}
+                                    {{-- @can(['course-languages.view'])
                                     <li class="{{ Nav::isResource('courselang') }}"><a
                                             href="{{url('courselang')}}"><span>{{ __('Course Language') }}</span></a>
                                     </li>
-                                    @endcan
-                                    @can(['course-reviews.view'])
+                                    @endcan --}}
+                                    {{-- @can(['course-reviews.view'])
                                     <li class="{{ Nav::isResource('coursereview') }}"><a
                                             href="{{url('coursereview')}}"><span>{{ __('Course Review') }}</span></a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['assignment.view'])
                                     @if($gsetting->assignment_enable == 1)
                                     <li class="{{ Nav::isRoute('assignment.view') }}"><a
@@ -203,11 +203,11 @@
                                     </li>
                                     @endif
                                     @endcan
-                                    @can(['refund-policy.view'])
+                                    {{-- @can(['refund-policy.view'])
                                     <li class="{{ Nav::isResource('refundpolicy') }}"><a
                                             href="{{url('refundpolicy')}}"><span>{{ __('Refund Policy') }}</span></a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['batch.view'])
                                     <li class="{{ Nav::isResource('batch') }}"><a
                                             href="{{url('batch')}}"><span>{{ __('Batch') }}</span></a>
@@ -218,12 +218,12 @@
                                             href="{{route('quiz.review')}}"><span>{{ __('Quiz Review') }}</span></a>
                                     </li>
                                     @endcan
-                                    @can(['private-course.view'])
+                                    {{-- @can(['private-course.view'])
                                     <li class="{{ Nav::isResource('private-course') }}"><a
                                             href="{{url('private-course')}}"><span>{{ __('Private Course') }}</span></a>
                                     </li>
-                                    @endcan
-                                    @can(['reported-course.view'])
+                                    @endcan --}}
+                                    {{-- @can(['reported-course.view'])
                                     <li class="{{ Nav::isResource('admin/report/view') }}">
                                         <a href="{{url('admin/report/view')}}">{{ __('Reported') }}
                                             {{ __('Course') }}
@@ -236,15 +236,15 @@
                                         <a href="{{url('user/question/report')}}">{{ __('Reported') }}
                                             {{ __('Question') }}</a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                 </ul>
                             </li>
                             @endcanany
-                            <li>
+                            {{-- <li>
                                 <a href="{{url('instructor/course')}}" class="menu text-truncate" title="Modified Courses Review"><i class="feather icon-check-circle text-secondary"></i>
                                     <span>{{ __('Modified Courses Review') }}</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             @if(Module::has('Ebook') && Module::find('Ebook')->isEnabled())
                             @include('ebook::sidebar.sidebar_menu')
                             @endif
@@ -283,7 +283,7 @@
                                     @endif
                                     <!-- ZoomLiveMeetings end  -->
                                     <!-- BigBlueMeetings start  -->
-                                    @if(isset($gsetting) && $gsetting->bbl_enable == 1)
+                                    {{-- @if(isset($gsetting) && $gsetting->bbl_enable == 1)
                                     <li
                                         class="{{ Nav::isRoute('bbl.setting') }} {{ Nav::isRoute('bbl.all.meeting') }} {{ Nav::isRoute('download.meeting') }}">
                                         <a href="javaScript:void();">
@@ -303,7 +303,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    @endif
+                                    @endif --}}
                                     <!-- BigBlueMeetings end  -->
 
                                     <!-- Google Meet Meeting start  -->
@@ -332,7 +332,7 @@
                                     <!-- Google Meet Meeting end  -->
 
                                     <!-- Jitsi Meeting start -->
-                                    @if(isset($gsetting) && $gsetting->jitsimeet_enable == 1)
+                                    {{-- @if(isset($gsetting) && $gsetting->jitsimeet_enable == 1)
                                     <li
                                         class="{{ Nav::isRoute('jitsi.dashboard') }} {{ Nav::isRoute('jitsi.create') }}">
                                         <a href="javaScript:void();">
@@ -344,21 +344,21 @@
                                                     href="{{ route('jitsi.dashboard') }}">{{ __('Dashboard') }}</a></li>
                                         </ul>
                                     </li>
-                                    @endif
+                                    @endif --}}
 
-                                    @if(Module::find('Googleclassroom') && Module::find('googleclassroom')->isEnabled())
+                                    {{-- @if(Module::find('Googleclassroom') && Module::find('googleclassroom')->isEnabled())
                                     @include('googleclassroom::layouts.admin_sidebar_menu')
                                     @endif
                                     <!-- Jitsi Meeting end -->
                                     <li class="{{ Nav::isResource('meeting-recordings') }}"><a
                                             href="{{url('meeting-recordings')}}"><span>{{ __('Meeting Recordings') }}</span></a>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                             </li>
                             @endcanany
 
-                            @can(['institute.view'])
+                            {{-- @can(['institute.view'])
                             <li>
                                 <a href="{{url('institute')}}" class="menu"><i class="feather icon-grid text-secondary"></i>
                                     <span>{{ __('Institute') }}</span>
@@ -370,8 +370,8 @@
                                 <a href="{{url('alumini')}}" class="menu"><i class="feather icon-user-check text-secondary"></i>
                                     <span>{{ __('Alumini') }}</span>
                                 </a>
-                            </li>
-                            <li class="{{ Nav::isRoute('certificate.index') }} {{ Nav::isRoute('create.certificate') }} {{ Nav::isRoute('certificate.setting') }}">
+                            </li> --}}
+                            {{-- <li class="{{ Nav::isRoute('certificate.index') }} {{ Nav::isRoute('create.certificate') }} {{ Nav::isRoute('certificate.setting') }}">
                                 <a href="javaScript:void();">
                                     <i class="feather icon-file-text text-secondary"></i>
                                     <span>{{ __('Certificate') }}</span>
@@ -390,14 +390,14 @@
                                     @endcan
                                 </ul>
                                 
-                            </li>
+                            </li> --}}
                            
 
                             <!--===================meeting end====================================  -->
                             <!-- ====================instructor start======================== -->
 
                             <!--===================instructor end====================================  -->
-                            @can(['coupons.view'])
+                            {{-- @can(['coupons.view'])
 
                             <li class="header">{{ __('Marketing') }}</li>
                             <li class="{{ Nav::isResource('coupon') }}">
@@ -413,8 +413,8 @@
                                     <i class="feather icon-help-circle text-secondary"></i><span>{{ __('Followers') }}</span>
                                 </a>
                             </li>
-                            @endcan
-                            @canany(['affiliate.manage',' wallet-setting.manage','wallet-transactions.manage'])
+                            @endcan --}}
+                            {{-- @canany(['affiliate.manage',' wallet-setting.manage','wallet-transactions.manage'])
                             <li class="{{ Nav::isRoute('save.affiliates') }} {{ Nav::isRoute('wallet.settings') }} {{ Nav::isRoute('wallet.transactions') }}">
                                 <a href="javaScript:void();" class="menu">
                                     <i class="feather icon-dollar-sign text-secondary"></i>
@@ -446,7 +446,7 @@
 
                                 </ul>
                             </li>
-                            @endcanany
+                            @endcanany --}}
                             <!-- PushNotification -->
                             @can(['push-notification.manage'])
                             <li class="{{ Nav::isRoute('onesignal.settings') }}">
@@ -470,7 +470,7 @@
 
 
                             <!-- attandance -->
-                            @can(['attendance.manage'])
+                            {{-- @can(['attendance.manage'])
                             @if(isset($gsetting) && $gsetting->attandance_enable == 1)
                             <li class="{{ Nav::isResource('attandance') }}">
                                 <a href="{{url('attandance')}}" class="menu">
@@ -479,7 +479,7 @@
                                 </a>
                             </li>
                             @endif
-                            @endcan
+                            @endcan --}}
 
                             <!-- coupon -->
                             @can(['orders.manage'])
@@ -514,17 +514,17 @@
                             @endcan
                            
                             <!-- pages start -->
-                            @can(['pages.view'])
+                            {{-- @can(['pages.view'])
                             <li class="{{ Nav::isResource('page') }}">
                                 <a href="{{url('page')}}" class="menu">
                                     <i class="feather icon-file-text text-secondary"></i>
                                     <span>{{ __('Pages') }}</span>
                                 </a> 
                             </li>
-                            @endcan
+                            @endcan --}}
                             <!-- pages end -->
                             <!-- report start  -->
-                            @canany(['report.progress-report.manage','report.quiz-report.manage','report.revenue-admin-report.manage','report.revenue-instructor-report.manage'])
+                            {{-- @canany(['report.progress-report.manage','report.quiz-report.manage','report.revenue-admin-report.manage','report.revenue-instructor-report.manage'])
                             <li class="{{ Nav::isResource('user/course/report') }} {{ Nav::isResource('user/question/report') }}{{url('show/progress/report')}} {{ Nav::isResource('show/quiz/report') }}">
                                 <a href="javaScript:void();" class="menu">
                                     <i class="feather icon-file-text text-secondary"></i>
@@ -579,13 +579,13 @@
                                     <li class="{{ Nav::isResource('attand/report') }}">
                                         <a href="{{url('attand/report')}}">{{ __('Attandance Report') }} </a>
                                     </li>
-                                    {{-- <li class="{{ Nav::isResource('coupon/report') }}">
+                                    <li class="{{ Nav::isResource('coupon/report') }}">
                                         <a href="{{url('coupon/report')}}">{{ __('Coupon Report') }} </a>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </li>
                             
-                            @endcanany
+                            @endcanany --}}
                             <!-- report end -->
                             <!-- forum -->
                             @can('forum-discussion.manage')
@@ -602,7 +602,7 @@
                             </li>
                             @endcan
                             <!-- faq start  -->
-                            @canany(['faq.faq-student.view','faq.faq-instructor.view'])
+                            {{-- @canany(['faq.faq-student.view','faq.faq-instructor.view'])
                             <li class="{{ Nav::isResource('faq') }} {{ Nav::isResource('faqinstructor') }}">
                                 <a href="javaScript:void();" class="menu">
                                     <i class="feather icon-help-circle text-secondary"></i>
@@ -621,17 +621,17 @@
 
                                 </ul>
                             </li>
-                            @endcanany
-                            @can(['career.manage'])
+                            @endcanany --}}
+                            {{-- @can(['career.manage'])
                             <li class="{{ Nav::isRoute('careers.page') }}">
                                 <a href="{{route('careers.page')}}" class="menu">
                                     <i class="feather icon-sidebar text-secondary"></i><span>{{ __('Career') }}</span>
                                 </a>
                             </li>
-                            @endcan
+                            @endcan --}}
                             <!-- faq end -->
                             <!-- location start -->
-                            @canany(['locations.country.view','locations.state.view','locations.city.view'])
+                            {{-- @canany(['locations.country.view','locations.state.view','locations.city.view'])
                             <li class="{{ Nav::isResource('admin/country') }} {{ Nav::isResource('admin/state') }} {{ Nav::isResource('admin/city') }}">
                                 <a href="javaScript:void();" class="menu"><i class="feather icon-map-pin text-secondary"></i>
                                     <span>{{ __('Locations') }}<div class="sub-menu truncate">Country, State, City</div></span>
@@ -657,7 +657,7 @@
 
                                 </ul>
                             </li>
-                            @endcanany
+                            @endcanany --}}
                             <!-- contact us start -->
                             @can('contact-us.manage')
                             <li class="{{ Nav::isResource('usermessage') }}">
@@ -666,18 +666,18 @@
                                 </a>
                             </li>
                             @endcan
-                            @can('job.manage')
+                            {{-- @can('job.manage')
                             @if(Module::has('Resume') && Module::find('Resume')->isEnabled())
                             @include('resume::front.job.admin.icon')
                             @endif
-                            @endcan
+                            @endcan --}}
                             <!-- contact us end -->
                             <!-- location end -->
                             <li class="header">{{ __('Setting') }}</li>
                             @if(Module::has('Upi') && Module::find('Upi')->isEnabled())
                             @include('upi::icon')
                             @endif
-                            @can(['get-api-key.manage'])
+                            {{-- @can(['get-api-key.manage'])
                             <li class="{{ Nav::isRoute('get.api.key') }}">
                                 <a href="{{route('get.api.key')}}" class="menu">
                                     <i class="feather icon-share text-secondary"></i><span>{{ __('Get API Keys') }}</span>
@@ -713,7 +713,7 @@
                                     <i class="feather icon-maximize text-secondary"></i>
                                     <span>{{ __('QR Setting') }}</span>
                                 </a>
-                            </li>
+                            </li> --}}
                          
                             <!-- front setting start  -->
                             @canany(['front-settings.testimonial.view','front-settings.advertisement.view','front-settings.sliders.view','front-settings.fact-slider.view','category-sliders.manage','get-started.manage','front-settings.trusted-sliders.view','widget.manage','front-settings.seo-directory.view','coming-soon.manage','terms-condition.manage','privacy-policy.manage','invoice-design.manage','login-signup.manage','video-setting.manage','breadcum-setting.manage','front-settings.fact-slider.view','join-an-instructor.manage '])
@@ -922,7 +922,7 @@
                             @endcanany
                             <!-- site setting end -->
                             <!-- payment setting start -->
-                            @canany(['payment-setting-credentials.manage','payment-setting-MPESA-setting.manage','payment-setting-bank-details.manage','payment-setting.manual-payment.view'])
+                            {{-- @canany(['payment-setting-credentials.manage','payment-setting-MPESA-setting.manage','payment-setting-bank-details.manage','payment-setting.manual-payment.view'])
                             <li class=" {{ Nav::isRoute('api.setApiView') }}{{ Nav::isRoute('bank.transfer') }}{{ Nav::isResource('manualpayment') }} ">
                                 <a href="javaScript:void();" class="menu"><i class="feather icon-dollar-sign text-secondary"></i>
                                     <span>{{ __('Payment Setting') }}<div class="sub-menu truncate">Credentials, MPESA Settings, Bank Deatils, Manual Payment</div></span>
@@ -951,7 +951,7 @@
                                     @endcan
                                 </ul>
                             </li>
-                            @endcanany
+                            @endcanany --}}
                             <!-- payment setting start end -->
                             <!-- player setting start -->
                             @canany(['player-settings.manage','player-settings.advertise.view'])
@@ -984,26 +984,25 @@
                             </li>
                             @endcanany
                             <!-- player setting start end -->
-                            @if(isset($gsetting) && $gsetting->activity_enable == '1')
+                            {{-- @if(isset($gsetting) && $gsetting->activity_enable == '1')
                             <li class="{{ Nav::isRoute('activity.index') }}">
                                 <a href="{{route('activity.index')}}" class="menu">
                                     <i class="feather icon-help-circle text-secondary"></i><span>{{ __('Activity Log') }}</span>
                                 </a>
                             </li>
 
-                            @endif
-                            @can(['addon.view'])
+                            @endif --}}
+                            {{-- @can(['addon.view'])
 
                             <li class="header">{{ __('Support') }}</li>
-                            <!-- help & support start  -->
                             <li class="{{ Nav::isResource('admin-addon') }}">
                                 <a href="{{url('admin/addon')}}" class="menu"> 
                                     <i class="feather icon-move text-secondary"></i><span>{{ __('Addon') }}
                                     {{ __('Manager') }}</span>
                                 </a>
                             </li>
-                            @endcan
-                            <li class="{{ Nav::isRoute('update.process') }} {{ Nav::isRoute('manual.process') }}">
+                            @endcan --}}
+                            {{-- <li class="{{ Nav::isRoute('update.process') }} {{ Nav::isRoute('manual.process') }}">
                                 <a href="javaScript:void();" class="menu"><i class="feather icon-share text-secondary"></i>
                                     <span>{{ __('Update') }}<div class="sub-menu truncate">Auto Update, Manual Update</div></span>
                                     <i class="feather icon-chevron-right"></i>
@@ -1020,8 +1019,8 @@
                                     </li>
                                     @endcan
                                 </ul>
-                            </li>
-                            @canany(['help-support-import-demo.manage','help-support-database-backup.manage','help-support-remove-public.manage','help-support-clear-cache.manage'])
+                            </li> --}}
+                            {{-- @canany(['help-support-import-demo.manage','help-support-database-backup.manage','help-support-remove-public.manage','help-support-clear-cache.manage'])
                             <li class="{{ Nav::isRoute('import.view') }} {{ Nav::isRoute('database.backup') }} ">
                                 <a href="javaScript:void();" class="menu">
                                     <i class="feather icon-help-circle text-secondary"></i>
@@ -1058,7 +1057,7 @@
 
                                 </ul>
                             </li>
-                            @endcanany
+                            @endcanany --}}
                             <!-- help & support end -->
 
 
