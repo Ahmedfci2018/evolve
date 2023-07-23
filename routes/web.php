@@ -122,7 +122,7 @@ Route::post('/verifycode','HomeController@verifycode');
     {
         Route::get('allinstructor/view', 'FrontinstructorController@index')->name('allinstructor/view');
             Route::get('allinstructor/profile/{id}', 'FrontinstructorController@profile')->name('allinstructor/profile');
-            Route::get('all/profile/{id}', 'FrontinstructorController@Allprofile')->name('all/profile');
+            Route::get('all/profile/{id?}', 'FrontinstructorController@Allprofile')->name('all/profile');
             Route::get('front/feature', 'FeaturesController@front')->name('front.feature');
 
        Route::middleware(['IsInstalled','is_verified', 'maintanance_mode'])->group(function () {
