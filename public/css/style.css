@@ -2531,8 +2531,10 @@ sup.redstar {
 }
 .about-team-block {
   background-color: #F4F4F4;
-  padding: 138px 90px;
+  padding: 135px 88px;
   height: 100%;
+  padding-bottom: 29px;
+  margin: 20px;
 }
 .about-team-heading {
   font-size: 28px;
