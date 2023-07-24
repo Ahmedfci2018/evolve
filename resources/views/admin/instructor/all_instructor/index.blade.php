@@ -88,7 +88,7 @@ $data['title'] = 'All Instructors';
                         class="img-responsive img-circle">
                 @else
                 <img @error('photo') is-invalid @enderror
-                        src="{{ Avatar::create($fname)->toBase64() }}" alt="{{$item->fname}}"
+                        src="{{ Avatar::create($fname??'N/A')->toBase64() }}" alt="{{$item->fname}}"
                         class="img-responsive img-circle" 
                       >
 
@@ -147,7 +147,7 @@ $data['title'] = 'All Instructors';
                                           class="img-responsive img-circle">
                                   @else
                                   <img @error('photo') is-invalid @enderror
-                                          src="{{ Avatar::create($fname)->toBase64() }}" alt="{{ $show->fname }} {{ $show['lname'] }}"
+                                          src="{{ Avatar::create($fname??'N/A')->toBase64() }}" alt="{{ $show->fname }} {{ $show['lname'] }}"
                                           class="img-responsive img-circle" 
                                         >
                   

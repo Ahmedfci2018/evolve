@@ -86,7 +86,7 @@ class HomeController extends Controller
         $instructors = User::select('*')->where('role', 'instructor')->where('status', '1')->get();
 
         $shareComponent = \Share::page(
-            'https://eclass.mediacity.co.in/'
+            '#dashboard'
             )
         ->facebook()
         ->twitter()
