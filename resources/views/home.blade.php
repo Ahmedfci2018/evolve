@@ -2888,6 +2888,9 @@ $enroll = NULL;
 </section>
 @endif
 <!-- Bundle end -->
+@php
+    dd($freecourse);
+@endphp
 @if(!$bestselling->isEmpty() && $hsetting->bestselling_enable && isset($bestselling) && count($bestselling) > 0 )
 <section id="student" class="student-main-block">
     <div class="container-xl">
