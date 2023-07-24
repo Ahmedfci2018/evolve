@@ -97,6 +97,7 @@ class HomeController extends Controller
         $discountcourse = Course::where('type','1')->where('status',1)->whereNotNUll('discount_price')->with('user')->latest()->take(10)->get();
         $categorie_ids = CategorySlider::first();
         $factsetting = Facts::limit(4)->where('status', '1')->get();
+        $freecourse = Course::where('type','0')->where('status','1')->with('user')->latest()->take(10)->get();
         $videosetting = Videosetting::first();
         $bestselling = Order::whereNotNUll('course_id')->with('courses','courses.user')->latest()->take(10)->get();
         if(isset($categorie_ids))
@@ -246,7 +247,7 @@ class HomeController extends Controller
         else{
 
         }
-        return view('home', compact('category', 'sliders', 'facts', 'categories', 'cors', 'bundles','shareComponent', 'meetings', 'bigblue', 'testi', 'trusted', 'recent_course_id', 'blogs', 'subscriptionBundles', 'batches', 'recent_course', 'total_count', 'advs', 'allgooglemeet','jitsimeeting', 'googleclassrooms', 'usercountry','instructors','factsetting','videosetting','discountcourse','bestselling','menus','pages','instruct','institute','get_enable','services','feature','servicesetting','featuresetting'));
+        return view('home', compact('freecourse','category', 'sliders', 'facts', 'categories', 'cors', 'bundles','shareComponent', 'meetings', 'bigblue', 'testi', 'trusted', 'recent_course_id', 'blogs', 'subscriptionBundles', 'batches', 'recent_course', 'total_count', 'advs', 'allgooglemeet','jitsimeeting', 'googleclassrooms', 'usercountry','instructors','factsetting','videosetting','discountcourse','bestselling','menus','pages','instruct','institute','get_enable','services','feature','servicesetting','featuresetting'));
         }
     }
     public function store(Request $request)

@@ -752,7 +752,7 @@ a.btn.btn-secondary:hover {
   background-position: 50% 0;
   background-repeat: round;
   background-size: cover;
-  height: 576px;
+  height: 600px;
 }
 .home-heading {
   font-size: 50px;
@@ -10676,7 +10676,7 @@ svg.feather {
   bottom: 46%;
 }
 .fact-main-block {
-  padding: 80px 0 40px;
+  padding: 99px 0 40px;
 }
 .facts-block {
   padding: 0 15px;
