@@ -93,7 +93,7 @@ class HomeController extends Controller
         ->linkedin()
         ->telegram()
         ->whatsapp();
-         $instruct = FeatureCourse::get();
+        $instruct = FeatureCourse::get();
         $discountcourse = Course::where('type','1')->where('status',1)->whereNotNUll('discount_price')->with('user')->latest()->take(10)->get();
         $categorie_ids = CategorySlider::first();
         $factsetting = Facts::limit(4)->where('status', '1')->get();

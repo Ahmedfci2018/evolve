@@ -35,13 +35,13 @@ $gets = App\Breadcum::first();
     <div class="container-xl">
         <div class="row">
             <div class="col-lg-7 col-md-6">
-                @if(isset($gsetting['map_url']))
+                {{-- @if(isset($gsetting['map_url']))
                 <section id="#" class="map-location btm-30">
                     <iframe src="{{ $gsetting['map_url'] }}" width="100%" height="450px"></iframe>
                 </section>
-                @endif
+                @endif --}}
             </div>
-            <div class="col-lg-5 col-md-6">
+            <div class="col-lg-12 col-md-12">
                 <h4 class="contact-us-heading">{{ __('Keep in Touch') }}</h4>
                 <form id="demo-form2" method="post" action="{{ route('contact.user') }}" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
                     {{ csrf_field() }}
