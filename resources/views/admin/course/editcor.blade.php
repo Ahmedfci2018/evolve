@@ -181,7 +181,7 @@
 
             <div class="col-md-6">
               <label for="exampleInputSlug">{{ __('Slug') }}: <sup class="redstar"></sup></label>
-              <input pattern="[/^\S*$/]+" type="text" class="form-control" name="slug" value="{{ $cor->slug}}" >
+              <input pattern="[/^\S*$/]+" type="text" class="form-control" name="slug" value="{{ $cor->slug}}" required>
             </div>
           </div>
           <br>

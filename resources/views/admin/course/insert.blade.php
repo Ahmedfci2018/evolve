@@ -157,7 +157,7 @@ $data['title1'] = 'Create a Course';
               </div>
               <div class="col-md-6">
                 <label for="exampleInputSlug">{{ __('Slug') }}: <sup class="redstar"></sup></label>
-                <input pattern="[/^\S*$/]+" type="text" class="form-control" name="slug" id="exampleInputPassword1" placeholder="{{ __('Enter Slug') }}" value="{{ (old('slug')) }}" >
+                <input pattern="[/^\S*$/]+" type="text" class="form-control" name="slug" id="exampleInputPassword1" placeholder="{{ __('Enter Slug') }}" value="{{ (old('slug')) }}" required>
               </div>
             </div>
             <br>
