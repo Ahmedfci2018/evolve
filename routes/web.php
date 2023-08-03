@@ -1146,6 +1146,8 @@ Route::post('/verifycode','HomeController@verifycode');
         Route::get('bundles/view', 'ViewmoreController@bundle')->name('bundles.view');
         Route::get('topdiscounted/view', 'ViewmoreController@topdiscounted')->name('topdiscounted.view');
 
+        Route::get('free/view', 'ViewmoreController@free')->name('free.view');
+
 
         Route::get('admin/instructor/settings', 'InstructorSettingController@view')->name('instructor.settings');
         Route::post('admin/instructor/update', 'InstructorSettingController@update')->name('instructor.update');

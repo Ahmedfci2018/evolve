@@ -57,4 +57,11 @@ class ViewmoreController extends Controller
         return view('front.viewmore.topdiscounted',compact('discountcourse'));
 
     }
+
+    public function free(){
+
+        $discountcourse = Course::where('type','0')->where('status','1')->with('user')->get();
+        return view('front.viewmore.free',compact('discountcourse'));
+
+    }
 }

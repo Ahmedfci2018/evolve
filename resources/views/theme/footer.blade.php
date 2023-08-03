@@ -25,7 +25,7 @@
                 @php
                     $widgets = App\WidgetSetting::first();
                 @endphp
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-3 col-md-3 col-12">
                    
                     <div class="footer-logo">
                         @if($gsetting->logo_type == 'L')
@@ -50,12 +50,12 @@
                 </div>
                 @if(isset($widgets) && $widgets->widget_enable == 1)
 
-                <div class="col-lg-2 col-md-2 col-4">
+                <div class="col-lg-3 col-md-3 col-4">
                     
                     <div class="widget"><b>{{ $widgets->widget_one }}</b></div>
                     <div class="footer-link">
                         <ul>
-                            @if($gsetting->instructor_enable == 1)
+                            {{-- @if($gsetting->instructor_enable == 1)
                                 @if(Auth::check())
                                     @if(Auth::User()->role == "user")
                                     <li><a href="#" data-toggle="modal" data-target="#myModalinstructor" title="{{ __('Become An Instructor')}}">{{ __('Become An Instructor') }}</a></li>
@@ -63,7 +63,7 @@
                                 @else
                                     <li><a href="{{ route('login') }}" title="{{ __('Become An Instructor') }}">{{ __('Become An Instructor') }}</a></li>
                                 @endif
-                            @endif
+                            @endif --}}
                             @if(isset($widgets) && $widgets->about_enable == 1)
                             <li><a href="{{ route('about.show') }}" title="{{ __('About us') }}">{{ __('About us') }}</a></li>
                             @endif
@@ -71,9 +71,7 @@
                             @if(isset($widgets) && $widgets->contact_enable == 1)
                             <li><a href="{{url('user_contact')}}" title="{{ __('Contact us') }}">{{ __('Contact us') }}</a></li>
                             @endif
-                            <li><a href="{{ route('front.service') }}" title="{{ __('Our Services') }}">{{ __('Our Services') }}</a></li>
-                            <li><a href="{{ route('front.feature') }}" title="{{ __('Our Feature') }}">{{ __('Our Feature') }}</a></li>
-                            <li><a href="{{ route('footer.alumini') }}" title="{{ __('Our Alumini') }}">{{ __('Aluminis') }}</a></li>
+                            
                             @php
                             $menus = App\Menu::get();
                             $pages = App\Page::get();
@@ -95,13 +93,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-4">
+                <div class="col-lg-3 col-md-3 col-4">
                     <div class="widget"><b>{{ $widgets->widget_two }}</b></div>
                     <div class="footer-link">
                         <ul>
-                            @if(isset($widgets) && $widgets->career_enable == 1)
+                            {{-- @if(isset($widgets) && $widgets->career_enable == 1)
                             <li><a href="{{ route('careers.show') }}" title="{{ __('Careers') }}">{{ __('Careers') }}</a></li>
-                            @endif
+                            @endif --}}
 
                             @if(isset($widgets) && $widgets->blog_enable == 1)
                             <li><a href="{{ route('blog.all') }}" title="{{ __('Blog') }}">{{ __('Blog') }}</a></li>
@@ -131,7 +129,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-4">
+                {{-- <div class="col-lg-2 col-md-2 col-4">
                     <div class="widget"><b>{{ $widgets->widget_three }}</b></div>
                     <div class="footer-link">
                         <ul>
@@ -164,14 +162,17 @@
                                     @endif
                                     @endforeach
                                 </ul>
+                            <li><a href="{{ route('front.service') }}" title="{{ __('Our Services') }}">{{ __('Our Services') }}</a></li>
+                            <li><a href="{{ route('front.feature') }}" title="{{ __('Our Feature') }}">{{ __('Our Feature') }}</a></li>
+                            <li><a href="{{ route('footer.alumini') }}" title="{{ __('Our Alumini') }}">{{ __('Aluminis') }}</a></li>
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
 
                 @endif
 
-                <div class="col-lg-2 col-md-2">
+                <div class="col-lg-1 col-md-1">
 
                     @php
                         $languages = App\Language::get(); 
@@ -191,7 +192,14 @@
                     @endif
 
 
-                    @php
+
+                </div>
+                
+                <div class="col-lg-1 col-md-1">
+
+                
+
+                    {{-- @php
                         $currencies = DB::table('currencies')->get(); 
                     @endphp
                     @if(isset($currencies) && count($currencies) > 0)
@@ -206,10 +214,9 @@
                             @endforeach
                         </ul>
                     </div>
-                    @endif
+                    @endif --}}
 
                 </div>
-                
                 
             </div>
         </div>
@@ -240,6 +247,90 @@
                                 <a href="{{url('privacy_policy')}}" title="{{ __('Privacy Policy') }}">{{ __('Privacy Policy') }}</a>
                                 @endif
                             </li>
+                            <li style="color: white;
+                            font-size: larger;
+                            font-weight: 700;">Follow Us</li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #3b5998;
+                                        font-size: 23px;
+                                        padding: 4px 13px 4px 13px;
+                                        border-radius: 50%;"
+                                    href="https://www.facebook.com/profile.php?id=100085132179989&mibextid=ZbWKwL"
+                                    role="button"
+                                    ><i class="fab fa-facebook-f"></i
+                                    ></a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #0088cc;
+                                        font-size: 23px;
+                                        padding: 4px 10px 4px 10px;
+                                        border-radius: 50%;"
+                                    href="https://t.me/take_profit20"
+                                    role="button"
+                                    ><i class="fab fa-telegram"></i
+                                    ></a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #ac2bac;
+                                        font-size: 23px;
+                                        padding: 4px 10px 4px 10px;
+                                        border-radius: 50%;"
+                                    href="https://www.instagram.com/takeprofitoffical/"
+                                    role="button"
+                                    ><i class="fab fa-instagram"></i
+                                    ></a>
+                            </li>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #010101;
+                                        font-size: 23px;
+                                        padding: 4px 10px 4px 10px;
+                                        border-radius: 50%;"
+                                    href="https://www.tiktok.com/@takeprofitac?_t=8apzcala3mA&_r=1"
+                                    role="button"
+                                    ><i class="fab fa-tiktok"></i
+                                    ></a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #FF0000;                                    ;
+                                        font-size: 23px;
+                                        padding: 4px 10px 4px 10px;
+                                        border-radius: 50%;"
+                                    href=""
+                                    role="button"
+                                    ><i class="fab fa-youtube"></i
+                                    ></a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    class="btn btn-primary btn-lg btn-floating"
+                                    style="background-color: #FFFC00;                                    ;
+                                        font-size: 23px;
+                                        padding: 4px 10px 4px 10px;
+                                        border-radius: 50%;color: #010101"
+                                    href=""
+                                    role="button"
+                                    ><i class="fab fa-snapchat"></i
+                                    ></a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>

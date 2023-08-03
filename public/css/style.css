@@ -695,6 +695,7 @@ sup.redstar {
 .Login-btn {
   text-align: right;
   padding: 6px 0;
+  margin-top: 17px;
 }
 .Login-btn .btn-primary,
 .Login-btn .btn-secondary {
@@ -5477,9 +5478,11 @@ a.btn.btn-secondary:hover {
 }
 .nav-wishlist {
   position: relative;
+  margin-top: 17px;
 }
 .shopping-cart {
   position: relative;
+  margin-top: 17px;
 }
 .red-menu-badge {
   font-size: 10px;
@@ -5619,6 +5622,7 @@ a.btn.btn-secondary:hover {
   align-items: normal;
   height: 100%;
   padding: 5px 0;
+  margin-top: 17px;
 }
 .my-dropdown {
   display: flex;
@@ -7454,7 +7458,7 @@ input.razorpay-payment-button {
 
 .nav-bar-main-block .logo .img-fluid {
   max-width: 100%;
-  height: 51px;
+  height: 83px;
   object-fit: scale-down;
   width: auto;
 }

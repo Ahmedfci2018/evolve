@@ -69,7 +69,7 @@
                             </form>
 
                             <div class="social-link btm-10">
-                                <h2><span>Or Sign Up Using</span></h2>
+                                {{-- <h2><span>Or Sign Up Using</span></h2> --}}
                                 <div class="row">
                                     @if($gsetting->fb_login_enable == 1)
                                     <div class="col-lg-2 col-4">

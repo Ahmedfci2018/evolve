@@ -50,19 +50,19 @@ $data['title2'] = 'Instructors Payout Settings';
 					</div>
 				</div>
 			</div>
-      <div class="form-group col-md-2">
-            	<label for="">{{ __('Paytm Enable') }}: </label><br>
-              <input  class="custom_toggle"  type="checkbox" name="paytm_enable" {{ optional($setting)['paytm_enable'] == '1' ? 'checked' : '' }}  />
-              <input type="hidden"  name="free" value="0" for="paytm" id="paytm">
-                
+      {{-- <div class="form-group col-md-2">
+            <label for="">{{ __('Paytm Enable') }}: </label><br>
+            <input  class="custom_toggle"  type="checkbox" name="paytm_enable" {{ optional($setting)['paytm_enable'] == '1' ? 'checked' : '' }}  />
+            <input type="hidden"  name="free" value="0" for="paytm" id="paytm">
               
-            </div>
-            <div class="form-group col-md-2">
+            
+          </div> --}}
+            {{-- <div class="form-group col-md-2">
 				<label for="">{{ __('PayPal Enable') }}: </label><br>
               <input  type="checkbox" class="custom_toggle" name="paypal_enable" {{ optional($setting)['paypal_enable'] == '1' ? 'checked' : '' }} />
 			  <input type="hidden"  name="free" value="0" for="paypal" id="paypal">
             
-            </div>
+            </div> --}}
             <div class="form-group col-md-2">
 				<label for="">{{ __('Bank Transfer Enable') }}: </label><br>
               <input  type="checkbox" class="custom_toggle" name="bank_enable" {{ optional($setting)['bank_enable'] == '1' ? 'checked' : '' }}  />

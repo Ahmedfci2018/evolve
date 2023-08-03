@@ -658,7 +658,7 @@
                                 @endif
                         
                                 @endif
-                                @if($drop->flash_deal == '1')
+                                {{-- @if($drop->flash_deal == '1')
                                 <a href="{{ route('flash.deals') }}"><li><i data-feather="battery-charging"></i>{{ __('Flash Deals') }}</li></a>
                                 @endif
 
@@ -667,7 +667,7 @@
                                 @if(Auth::User()->role == "instructor")
                                 <a href="{{ route('plan.page') }}"><li><i data-feather="tag"></i>{{ __('InstructorPlan') }}</li></a>
                                 @endif
-                                @endif
+                                @endif --}}
 
 
                                 @if(Auth::User()->role == "user" || Auth::User()->role == "instructor")
@@ -800,10 +800,10 @@
                         
                                 @endif
 
-                                <a href="{{ route('flash.deals') }}"><li><i data-feather="battery-charging"></i>{{ __('Flash Deals') }}</li></a>
+                                {{-- <a href="{{ route('flash.deals') }}"><li><i data-feather="battery-charging"></i>{{ __('Flash Deals') }}</li></a> --}}
 
 
-                                @if(env('ENABLE_INSTRUCTOR_SUBS_SYSTEM') == 1)
+                                {{-- @if(env('ENABLE_INSTRUCTOR_SUBS_SYSTEM') == 1)
 
                                 @if(Auth::User()->role == "instructor")
                                 <a href="{{ route('plan.page') }}"><li><i data-feather="tag"></i>{{ __('InstructorPlan') }}</li></a>
@@ -815,7 +815,7 @@
                                 @if($gsetting->device_control == 1)
                                 <a href="{{ route('active.courses') }}" title="Watchlist"><li><i data-feather="framer"></i>{{ __('Watchlist') }}</li></a>
                                 @endif
-                                @endif
+                                @endif --}}
 
 
                                 @if($gsetting->donation_enable == 1)
@@ -836,7 +836,7 @@
 
                                 @endif
 
-                                <a href="{{ route('compare.index') }}"><li><i data-feather="bar-chart"></i>{{ __("Compare") }}</li></a>
+                                {{-- <a href="{{ route('compare.index') }}"><li><i data-feather="bar-chart"></i>{{ __("Compare") }}</li></a> --}}
 
                                 @if(Module::has('Resume') && Module::find('Resume')->isEnabled())
                                     @include('resume::front.searchresume')
@@ -851,7 +851,7 @@
                                         @include('forum::layouts.sidebar_menu')
                                     @endif
                                 @endif
-                                <a href="{{ route('my.leaderboard') }}"><li><i class="icon-chart icons"></i>{{ __('MyLeaderboard') }}</li></a>
+                                {{-- <a href="{{ route('my.leaderboard') }}"><li><i class="icon-chart icons"></i>{{ __('MyLeaderboard') }}</li></a>
                                 @if(Auth::User()->role == "user")
                                 <a href="{{ route('studentprofile') }}"><li><i data-feather="share"></i>{{ __('Share profile') }}</li></a>
                                 @endif
@@ -860,7 +860,7 @@
                                 @if(Module::has('Ebook') && Module::find('Ebook')->isEnabled())
                                 <a href="{{ route('web.ebook.confirm-order') }}"><li><i data-feather="book-open"></i>{{ __('My Ebook') }}</li></a>
 
-                                @endif 
+                                @endif  --}}
                                 </div>
                                 
 

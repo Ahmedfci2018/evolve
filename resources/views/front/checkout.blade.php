@@ -67,7 +67,7 @@ $gets = App\Breadcum::first();
 				            				@if($cart['preview_image'] !== NULL && $cart['preview_image'] !== '')
 				            					<a href="{{ route('user.course.show',['id' => $cart->id, 'slug' => $cart->slug ]) }}"><img src="{{ asset('images/course/'. $cart->preview_image) }}" class="img-fluid" alt="course"></a>
 				            				@else
-												<a href="{{ route('user.course.show',['id' => $cart->courses->id, 'slug' => $cart->slug ]) }}"><img src="{{ Avatar::create($cart->title)->toBase64() }}" class="img-fluid" alt="course"></a>
+												<a href="{{ route('user.course.show',['id' => $cart->courses->id ?? $cart->id, 'slug' => $cart->slug ]) }}"><img src="{{ Avatar::create($cart->title)->toBase64() }}" class="img-fluid" alt="course"></a>
 				            				@endif
 			            				@else
 			            					@if($cart->bundle['preview_image'] !== NULL && $cart->bundle['preview_image'] !== '')

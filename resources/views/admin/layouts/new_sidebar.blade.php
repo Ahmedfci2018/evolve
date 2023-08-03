@@ -728,7 +728,7 @@
                                             href="{{url('testimonial')}}"><span>{{ __('Testimonial') }}</span></a>
                                     </li>
                                     @endcan
-                                    <li class="{{ Nav::isResource('admin/menu') }}">
+                                    {{-- <li class="{{ Nav::isResource('admin/menu') }}">
                                         <a href="{{url('admin/menu')}}">
                                             <span>{{ __('Menu Customisation') }}</span>
                                         </a>
@@ -737,7 +737,7 @@
                                     <li class="{{ Nav::isResource('advertisement') }}"><a
                                             href="{{url('advertisement')}}"><span>{{ __('Advertisement')}}</span></a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['front-settings.sliders.view'])
                                     <li class="{{ Nav::isResource('slider') }}"><a
                                             href="{{url('slider')}}"><span>{{ __('Slider') }}</span></a>
@@ -756,22 +756,22 @@
                                     @endcan
                                     @can(['get-started.manage'])
 
-                                    <li class="{{ Nav::isResource('getstarted') }}"><a
+                                    {{-- <li class="{{ Nav::isResource('getstarted') }}"><a
                                             href="{{url('getstarted')}}">{{ __('Get Started') }}</a>
-                                    </li>
+                                    </li> --}}
                                     @endcan
                                     @can(['front-settings.trusted-sliders.view'])
                                     <li class="{{ Nav::isResource('trusted') }}"><a
                                             href="{{url('trusted')}}"><span>{{ __('Trusted Slider') }}</span></a>
                                     </li>
                                     @endcan
-                                    @can(['widget.manage'])
+                                    {{-- @can(['widget.manage'])
                                     
                                     <li class="{{ Nav::isRoute('widget.setting') }}"><a
                                             href="{{route('widget.setting')}}">{{ __('Widget') }}</a>
                                     </li>
-                                    @endcan
-                                    @can(['front-settings.seo-directory.view'])
+                                    @endcan --}}
+                                    {{-- @can(['front-settings.seo-directory.view'])
                                     <li class="{{ Nav::isResource('directory') }}"><a
                                             href="{{url('directory')}}"><span>{{ __('Seo') }}
                                                 {{ __('Directory') }}</span></a>
@@ -783,7 +783,7 @@
                                         <a
                                             href="{{route('comingsoon.page')}}">{{ __('Coming Soon') }}</a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['terms-condition.manage'])
                                     <li class="{{ Nav::isRoute('termscondition') }}">
                                         <a href="{{route('termscondition')}}">{{ __('Terms & Condition') }}
@@ -795,18 +795,18 @@
                                         <a href="{{route('policy')}}">{{ __('Privacy Policy') }}</a>
                                     </li>
                                     @endcan
-                                    @can(['invoice-design.manage'])
+                                    {{-- @can(['invoice-design.manage'])
                                    
 
                                     <li class="{{ Nav::isRoute('invoice/settings') }}">
                                         <a href="{{ url('invoice/settings') }}">{{ __('Invoice Design') }}{{ __('') }}</a>
                                     </li>
-                                    @endcan
-                                    @can(['homepage-setting.manage'])
+                                    @endcan --}}
+                                    {{-- @can(['homepage-setting.manage'])
                                     <li class="{{ Nav::isRoute('homepage.setting') }}">
                                         <a href="{{route('homepage.setting')}}" class="menu"><span>{{ __('Homepage Setting') }}</span></a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['login-signup.manage'])
                                     <li class="{{ Nav::isRoute('login') }}">
                                         <a href="{{ url('settings/login') }}">{{ __('Login/Signup') }}{{ __('') }}</a>
@@ -817,16 +817,16 @@
                                         <a href="{{ route('videosetting') }}">{{ __('Video Setting') }}{{ __('') }}</a>
                                     </li>
                                     @endcan
-                                    @can(['breadcum-setting.manage'])
+                                    {{-- @can(['breadcum-setting.manage'])
                                     <li class="{{ Nav::isRoute('breadcum') }}">
                                         <a href="{{ url('breadcum/setting') }}">{{ __('Breadcum Setting') }}{{ __('') }}</a>
                                     </li>
-                                    @endcan
-                                    @can(['front-settings.fact-slider.view'])
+                                    @endcan --}}
+                                    {{-- @can(['front-settings.fact-slider.view'])
                                     <li class="{{ Nav::isRoute('fact') }}">
                                         <a href="{{ url('fact') }}">{{ __('Fact Setting, ') }}{{ __('') }}</a>
                                     </li>
-                                    @endcan
+                                    @endcan --}}
                                     @can(['join-an-instructor.manage'])
                                     <li class="{{ Nav::isRoute('joininstructor') }}">
                                         <a href="{{ url('join/setting') }}">{{ __('Join an Instructor') }}{{ __('') }}</a>
@@ -838,12 +838,12 @@
                                     <li class="{{ Nav::isRoute('service') }}">
                                         <a href="{{ url('service') }}">{{ __('Services') }}{{ __('') }}</a>
                                     </li>
-                                    <li class="{{ Nav::isRoute('feature') }}">
+                                    {{-- <li class="{{ Nav::isRoute('feature') }}">
                                         <a href="{{ url('feature') }}">{{ __('Feature') }}{{ __('') }}</a>
                                     </li>
                                     <li class="{{ Nav::isRoute('setting/feature') }}">
                                         <a href="{{ url('setting/feature') }}">{{ __('Feature Setting') }}{{ __('') }}</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </li>
                             @endcanany
@@ -851,7 +851,7 @@
                             <!-- front setting end -->
                             <!-- site setting start  -->
                             @canany(['settings.manage','pwa.manage','adsense-setting.manage','twilio-setting.manage','site-map-setting.manage','site-settings.language.view','email-design.manage'])
-                            <li class="{{ Nav::isRoute('gen.set') }} {{ Nav::isRoute('careers.page') }}  {{ Nav::isRoute('termscondition') }} {{ Nav::isRoute('policy') }}  {{ Nav::isRoute('show.pwa') }} {{ Nav::isRoute('adsense') }} {{ Nav::isRoute('ipblock.view') }}   {{ Nav::isRoute('twilio.settings') }} {{ Nav::isRoute('show.sitemap') }} {{ Nav::isRoute('show.lang') }}">
+                            {{-- <li class="{{ Nav::isRoute('gen.set') }} {{ Nav::isRoute('careers.page') }}  {{ Nav::isRoute('termscondition') }} {{ Nav::isRoute('policy') }}  {{ Nav::isRoute('show.pwa') }} {{ Nav::isRoute('adsense') }} {{ Nav::isRoute('ipblock.view') }}   {{ Nav::isRoute('twilio.settings') }} {{ Nav::isRoute('show.sitemap') }} {{ Nav::isRoute('show.lang') }}">
                                 <a href="javaScript:void();" class="menu"><i class="feather icon-settings text-secondary"></i>
                                     <span>{{ __('Site Setting') }}<div class="sub-menu truncate">{{__('Setting, PWA, Adsense, IP Block Settings, Twilio, Site Map, Language, Email Design')}}</div></span>
                                     <i class="feather icon-chevron-right"></i>
@@ -918,7 +918,7 @@
 
 
                                 </ul>
-                            </li>
+                            </li> --}}
                             @endcanany
                             <!-- site setting end -->
                             <!-- payment setting start -->
@@ -954,7 +954,7 @@
                             @endcanany --}}
                             <!-- payment setting start end -->
                             <!-- player setting start -->
-                            @canany(['player-settings.manage','player-settings.advertise.view'])
+                            {{-- @canany(['player-settings.manage','player-settings.advertise.view'])
                             <li class="{{ Nav::isRoute('player.set') }} {{ Nav::isRoute('ads') }} {{ Nav::isRoute('ad.setting') }}">
                                 <a href="javaScript:void();" class="menu"><i class="feather icon-play-circle text-secondary"></i>
                                     <span>{{ __('Player Settings') }}<div class="sub-menu truncate">Player Customization, Advertise Settings</div></span>
@@ -982,7 +982,7 @@
 
                                 </ul>
                             </li>
-                            @endcanany
+                            @endcanany --}}
                             <!-- player setting start end -->
                             {{-- @if(isset($gsetting) && $gsetting->activity_enable == '1')
                             <li class="{{ Nav::isRoute('activity.index') }}">
